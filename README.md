@@ -8,7 +8,7 @@ The source for the bookinfo service is from the [Istio repo](https://github.com/
 ## Backstage setup
 
 
-1. Install the Backstage aspp
+1. Install the Backstage app
 
 2. Run the postgres database (locally):
 

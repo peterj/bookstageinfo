@@ -1,0 +1,48 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: bookinfo-bu
+  description: Bookinfo Business Unit 
+spec:
+  type: business-unit
+  profile:
+    displayName: Bookinfo Business Unit
+    email: bu@example.com
+  children: [backend, frontend]
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: backend
+  description: The group responsible for backend services 
+spec:
+  type: team
+  profile:
+    displayName: Backend Group
+    email: backend@example.com
+  parent: bookinfo-bu
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: ratings-team
+  description: The group responsible for the Ratings service 
+spec:
+  type: team
+  profile:
+    displayName: Ratings Service Team
+    email: ratings@example.com
+  parent: backend
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: frontend
+  description: The group responsible for frontend services 
+spec:
+  type: team
+  profile:
+    displayName: Frontend Group
+    email: frontend@example.com
+  parent: bookinfo-bu
