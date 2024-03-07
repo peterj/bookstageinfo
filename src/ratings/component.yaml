@@ -1,0 +1,132 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ratings
+  description: Ratings backend
+  tags:
+    - backend
+    - nodejs
+  annotations:
+    github.com/project-slug: peterj/bookstageinfo
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: ratings
+    backstage.io/kubernetes-label-selector: 'app=ratings'
+spec:
+  type: service
+  lifecycle: production
+  owner: unknown
+  system: bookinfo
+  providesApis:
+    - ratings-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: ratings-api
+  description: API for the ratings backend
+spec:
+  type: openapi
+  lifecycle: production
+  owner: unknown
+  system: bookinfo
+  definition: |
+  swagger: "2.0"
+  info:
+    description: "This is the API of the ratings service."
+    version: "1.0.0"
+    title: "Ratings API"
+    termsOfService: "https://istio.io/"
+    license:
+      name: "Apache 2.0"
+      url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  basePath: "/api/v1"
+  tags:
+  - name: "rating"
+    description: "Rating information for a product"
+  externalDocs:
+    description: "Learn more about the Istio BookInfo application"
+    url: "https://istio.io/docs/samples/bookinfo.html"
+  paths:
+    /ratings/{id}:
+      get:
+        tags:
+        - "rating"
+        summary: "Get ratings for a product"
+        description: "Get ratings for a product, including stars and their color."
+        operationId: "getProductRatings"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Rating"
+        responses:
+          200:
+            description: "successful operation"
+            schema:
+              $ref: "#/definitions/ProductRatings"
+          400:
+            description: "Invalid product id"
+      post:
+        tags:
+        - "rating"
+        summary: "Set the ratings for a product"
+        description: "Set the ratings for a product,."
+        operationId: "setProductRatings"
+        consumes:
+        - "application/json"
+        produces:
+        - "application/json"
+        parameters:
+        - name: "id"
+          in: "path"
+          description: "Product id"
+          required: true
+          type: "integer"
+          format: "int32"
+        responses:
+          200:
+            description: "successful operation"
+            schema:
+              $ref: "#/definitions/Rating"
+          400:
+            description: "Invalid product id"
+  definitions:
+    Rating:
+      type: "object"
+      description: "Rating of a product"
+      properties:
+        stars:
+          type: "integer"
+          format: "int32"
+          minimum: 1
+          maximum: 5
+          description: "Number of stars"
+        color:
+          type: "string"
+          enum:
+            - "red"
+            - "black"
+          description: "Color in which stars should be displayed"
+      required:
+      - "stars"
+      - "color"
+    ProductRatings:
+      type: "object"
+      description: "Object containing ratings of a product"
+      properties:
+        id:
+          type: "integer"
+          format: "int32"
+          description: "Product id"
+        ratings:
+          type: "object"
+          description: "A hashmap where keys are reviewer names, values are number of stars"
+          additionalProperties: 
+            type: "string"
+      required:
+      - "id"
+      - "ratings"

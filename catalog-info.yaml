@@ -1,0 +1,10 @@
+# Top-level catalog-info with urls pointing to all sub-components
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: bookstageinfo
+spec:
+  type: url
+  targets:
+    - ./src/ratings/component.yaml
+
