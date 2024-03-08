@@ -22,6 +22,7 @@ spec:
     displayName: Backend Group
     email: backend@example.com
   parent: bookinfo-bu
+  children: [ratings-team]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -34,6 +35,7 @@ spec:
     displayName: Ratings Service Team
     email: ratings@example.com
   parent: backend
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
@@ -46,6 +48,7 @@ spec:
     displayName: Frontend Group
     email: frontend@example.com
   parent: bookinfo-bu
+  children: []
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
