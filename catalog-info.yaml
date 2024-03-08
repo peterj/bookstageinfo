@@ -8,3 +8,4 @@ spec:
   targets:
     - ./src/ratings/component.yaml
     - ./src/details/component.yaml
+    - ./src/reviews/component.yaml
