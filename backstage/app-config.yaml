@@ -87,6 +87,8 @@ scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
 
 catalog:
+  # TODO: this should be set to a higher value for production. Docs suggest 45min as a minimum
+  processingInterval: { seconds: 30}
   locations:
     - type: url
       # TODO: Change to your fork
