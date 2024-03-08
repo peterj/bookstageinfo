@@ -14,7 +14,7 @@ metadata:
 spec:
   type: service
   lifecycle: production
-  owner: ratings-team
+  owner: group:ratings-team
   system: bookinfo
   providesApis:
     - ratings-api
@@ -27,7 +27,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: ratings-team
+  owner: group:ratings-team
   system: bookinfo
   definition: |
     swagger: "2.0"

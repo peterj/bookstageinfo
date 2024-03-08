@@ -7,5 +7,5 @@ spec:
   type: url
   targets:
     - ./src/ratings/component.yaml
-    - ./groups.yaml
-    - ./users.yaml
+    - ./users/groups.yaml
+    - ./users/users.yaml
