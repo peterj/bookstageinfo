@@ -1,5 +1,13 @@
 ---
 apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: bookstageinfo
+  description: Bookstageinfo system
+spec:
+  owner: bookinfo-bu
+---
+apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: bookinfo-bu
