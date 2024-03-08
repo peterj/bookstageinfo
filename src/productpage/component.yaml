@@ -12,7 +12,7 @@ metadata:
     backstage.io/kubernetes-id: productpage
     backstage.io/kubernetes-label-selector: 'app=productpage'
 spec:
-  type: website
+  type: service
   lifecycle: production
   owner: frontend
   system: bookstageinfo
