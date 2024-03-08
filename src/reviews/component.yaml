@@ -15,7 +15,7 @@ spec:
   type: service
   lifecycle: production
   owner: backend
-  system: bookinfo
+  system: bookstageinfo
   providesApis:
     - reviews-api
   consumesApis:

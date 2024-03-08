@@ -15,7 +15,7 @@ spec:
   type: service
   lifecycle: production
   owner: ratings-team
-  system: bookinfo
+  system: bookstageinfo
   providesApis:
     - ratings-api
 ---
