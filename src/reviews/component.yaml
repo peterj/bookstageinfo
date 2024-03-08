@@ -21,7 +21,7 @@ spec:
   consumesApis:
     - ratings-api
   dependsOn:
-    - service:ratings
+    - ratings
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
