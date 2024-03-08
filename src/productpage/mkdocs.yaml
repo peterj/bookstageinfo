@@ -1,0 +1,7 @@
+site_name: Product page website
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core

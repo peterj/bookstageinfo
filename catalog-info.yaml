@@ -9,3 +9,4 @@ spec:
     - ./src/ratings/component.yaml
     - ./src/details/component.yaml
     - ./src/reviews/component.yaml
+    - ./src/productpage/component.yaml
