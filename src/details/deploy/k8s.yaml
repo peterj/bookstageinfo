@@ -13,52 +13,45 @@
 #   limitations under the License.
 
 ##################################################################################################
-# Ratings service
+# Details service
 ##################################################################################################
 apiVersion: v1
 kind: Service
 metadata:
-  name: ratings
+  name: details
   labels:
-    app: ratings
-    service: ratings
+    app: details
+    service: details
 spec:
   ports:
   - port: 9080
     name: http
   selector:
-    app: ratings
----
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: bookinfo-ratings
-  labels:
-    account: ratings
+    app: details
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ratings-v1
+  name: details-v1
   labels:
-    app: ratings
+    app: details
     version: v1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ratings
+      app: details
       version: v1
   template:
     metadata:
       labels:
-        app: ratings
+        app: details
         version: v1
     spec:
-      serviceAccountName: bookinfo-ratings
       containers:
-      - name: ratings
-        image: docker.io/istio/examples-bookinfo-ratings-v1:1.18.0
+      - name: details
+        image: docker.io/istio/examples-bookinfo-details-v1:1.18.0
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 9080
+---

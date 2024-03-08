@@ -7,3 +7,4 @@ spec:
   type: url
   targets:
     - ./src/ratings/component.yaml
+    - ./src/details/component.yaml
