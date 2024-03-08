@@ -6,6 +6,4 @@ metadata:
 spec:
   type: url
   targets:
-    - ./src/ratings/component.yaml
-    - ./users/groups.yaml
-    - ./users/users.yaml
+    - ./src/ratings/component.yamlG
