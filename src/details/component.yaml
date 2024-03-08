@@ -2,10 +2,10 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: details
-  description: DEtails backend
+  description: Details backend
   tags:
     - backend
-    - nodejs
+    - ruby
   annotations:
     github.com/project-slug: peterj/bookstageinfo
     backstage.io/techdocs-ref: dir:.

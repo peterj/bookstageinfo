@@ -1,0 +1,7 @@
+site_name: Reviews Service
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core
