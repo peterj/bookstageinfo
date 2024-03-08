@@ -1,10 +1,19 @@
 # Bookstageinfo
 
-This is repo used to showcase Backstage withe the Bookinfo application (hence book-stage-info).
+This is repo used to showcase Backstage with the Bookinfo application (hence book-stage-info).
 
 ![Bookinfo](./img/bookinfo.png)
 
 The source for the bookinfo service is from the [Istio repo](https://github.com/istio/istio/).
+
+Check out my YouTube channel for Backstage videos:
+
+-  [Part 1: What is Backstage?](https://youtube.com/live/5Vt9ixVGR0Q)
+    Getting familiar with Backstage, basic set up with database, Github integration and Kubernetes.
+
+- [Part 2: What is Backstage?](https://youtube.com/live/JsII4MXdCBw)
+    Building templates and plugins.
+
 
 ## Backstage setup
 
