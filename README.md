@@ -2,8 +2,9 @@
 
 This is repo used to showcase Backstage withe the Bookinfo application (hence book-stage-info).
 
-The source for the bookinfo service is from the [Istio repo](https://github.com/istio/istio/).
+![Bookinfo](./img/bookinfo.png)
 
+The source for the bookinfo service is from the [Istio repo](https://github.com/istio/istio/).
 
 ## Backstage setup
 
@@ -41,3 +42,12 @@ yarn dev
 ```
 
 Before you run the app for the first time, make sure you installed the dependencies (`yarn install`).
+
+## Setting up Kubernetes
+
+The configuration (`app-config.yaml`) assumes you have a local Kubernetes cluster running (i.e. `kubectl proxy`) that Backstage app can access. Additionally, it's assumed you have deployed the [Bookinfo application to the cluster](https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/platform/kube/bookinfo.yaml). Alternatively, you can individually deploy services using the manfiests in the `/deploy` folder.
+
+
+Once you have the Kubernetes cluster setup, Bookinfo deployed and the proxy running, you'll see a "Kubernetes" tab on the components page:
+
+![Kubernetes tab for the productpage](./img/k8stab.png)

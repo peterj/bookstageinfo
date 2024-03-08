@@ -5,15 +5,15 @@ app:
 organization:
   name: Bookstageinfo Inc
 
-# kubernetes:
-#   serviceLocatorMethod:
-#     type: 'singleTenant'
-#   clusterLocatorMethods:
-#     - type: 'localKubectlProxy'
-#       clusters:
-#         - url: http://127.0.0.1:8001
-#           name: local-k8s
-#           title: 'My Local Kubernetes cluster'
+kubernetes:
+  serviceLocatorMethod:
+    type: 'singleTenant'
+  clusterLocatorMethods:
+    - type: 'localKubectlProxy'
+      clusters:
+        - url: http://127.0.0.1:8001
+          name: local-k8s
+          title: 'My Local Kubernetes cluster'
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
   # See https://backstage.io/docs/auth/service-to-service-auth for
