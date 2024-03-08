@@ -70,7 +70,6 @@ spec:
                 description: "successful operation"
                 schema:
                   $ref: "#/definitions/ProductDetails"
-              400:
     definitions:
       ProductDetails:
           type: "object"
