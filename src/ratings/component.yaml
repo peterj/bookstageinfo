@@ -28,7 +28,7 @@ spec:
   type: openapi
   lifecycle: production
   owner: ratings-team
-  system: bookinfo
+  system: bookstageinfo
   definition: |
     swagger: "2.0"
     info:
