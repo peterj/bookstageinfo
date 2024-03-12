@@ -61,6 +61,8 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { EntityKubernetesContent } from '@backstage/plugin-kubernetes';
 
 
+import { KubernetesLogsPage } from '@internal/backstage-plugin-kubernetes-logs';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -148,6 +150,12 @@ const serviceEntityPage = (
     <EntityLayout.Route path="/" title="Overview">
       {overviewContent}
     </EntityLayout.Route>
+
+    {/* Adding our custom plugin to the page */}
+    <EntityLayout.Route path="/kubernetes-logs" title="Kubernetes Logs">
+      <KubernetesLogsPage/>
+    </EntityLayout.Route>
+
 
     <EntityLayout.Route path="/kubernetes" title="Kubernetes">
       <EntityKubernetesContent refreshIntervalMs={30000} />

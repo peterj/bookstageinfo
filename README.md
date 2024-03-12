@@ -14,7 +14,6 @@ Check out my YouTube channel for Backstage videos:
 - [Part 2: What is Backstage?](https://youtube.com/live/JsII4MXdCBw)
     Building templates and plugins.
 
-
 ## Backstage setup
 
 The Backstage app is in the `backstage` folder. Before you run the app, make sure you set up the database and configure environment variables.
@@ -31,7 +30,7 @@ If you want to use a different database, you can change the database configurati
 
 ### 2. Environment variables
 
-Before you run the app, you need to set the environment variables for Github integration (`GITHUB_TOKEN`) and auth (`GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`). 
+Before you run the app, you need to set the environment variables for Github integration (`GITHUB_TOKEN`) and auth (`GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`).
 
 ```shell
 export GITHUB_TOKEN=your-github-token
